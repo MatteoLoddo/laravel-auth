@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,47 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// index
+ROUTE::get('/themes','ThemeController@index')->name('themes.index');
+
+
+
+// create
+ROUTE::get('/themes/create','ThemeController@create')->name('themes.create');
+
+//store
+ROUTE::post('/themes','ThemeController@store')->name('themes.store');
+
+// show
+ROUTE::get('/themes/{theme}','ThemeController@show')->name('themes.show');
+
+
+
+
+//edit
+ROUTE::get('/themes/{theme}/edit','ThemeController@edit')->name('themes.edit');
+
+//update
+ROUTE::match(['patch', 'put'],'/themes/{theme}','ThemeController@update')->name('themes.update');
+
+
+//destory
+ROUTE::delete('/themes/{theme}/','ThemeController@destroy')->name('themes.destroy');
+
+
+
+
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+// middleware
+// Route::middleware('auth')->get('/admin', 'Admin\HomeController@index')->name('admin.index');
+
+
+// Route::get('/admin', 'Admin\HomeController@index')->name('admin.index');
+
+
