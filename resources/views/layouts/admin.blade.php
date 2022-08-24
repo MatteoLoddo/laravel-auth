@@ -13,7 +13,10 @@
 
 <body>
   <div>
+    <div>
     @include('partials.navbar')
+    
+  </div>
 
     <main class="p-3">
 

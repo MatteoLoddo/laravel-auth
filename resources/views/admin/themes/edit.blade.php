@@ -2,7 +2,7 @@
 @section('page_title' ,'Modifica tema')
 @section('page_content')
     <div class="container">
-        <form action="{{ route('themes.update',"$theme->id") }}" method="post">
+        <form action="{{ route('admin.themes.update',"$theme->id") }}" method="post">
             @csrf
             {{-- per edit aggiungiamo il metodo --}}
             @method('PUT')
@@ -58,7 +58,7 @@
             {{-- button SUBMIT --}}
             <button class='btn btn-success'type="submit">Aggiungi</button>
             {{-- button ANNULLA --}}
-            <a class="btn btn-danger " href="{{ route('themes.index') }}">Annulla</a>
+            <a class="btn btn-danger " href="{{ route('admin.themes.index') }}">Annulla</a>
 
         </form>
     </div>
