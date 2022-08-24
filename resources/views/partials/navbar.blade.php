@@ -4,19 +4,16 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto  mb-2 mb-lg-0 ">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/">Home</a>
+                    <a class="nav-link text-light" href="{{route('admin.home')}}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="{{ route('admin.themes.index') }}">Temi</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link  text-light" href="#">Plugin</a>
-                </li>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Notizie</a>
-                </li>
-            </ul>
+                <li>
+            @if (Route::has('login'))
+            @include('partials.login')
+            @endif
+            </li>
 
         </div>
     </div>
